@@ -13,7 +13,7 @@
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
-        }
+        }   
 
         main {
             background-color: antiquewhite;
@@ -32,12 +32,26 @@ Colégio Estadual Princesa Isabel
 
 
     <main>
+        <div>
+            <h2>Meu primeiro post:</h2>
+        <p class="autor">Por: Pedro Rodriguês da Silva</p>
         <p>O Colégio Estadual Princesa Isabel está localizado na cidade de Araruna, no interior do Paraná.</p>
-        <p>A escola opera em período Regular, manhã, tarde e noite, com seis aulas e intervalo de 15 minutos.</p>
+        <p>A escola opera em período Regular, manhã, tarde e noite com seis aulas e intervalo de 15 minutos.</p>
         <p>Os professores são dedicados e atenciosos, quando se trata de ensinar os estudantes e preparar as aulas.</p>
         <p>Os alimentos são de boa qualidade e preparados com atenção pelas cozinheiras.</p>
+        <button>💩​ <span>5233478963</span></button>
+        
+    </div>
     </main>
 
 </body>
+<script>
+    const botao = document.querySelector("button");
+    botao.addEvenListener("click", botaoClicando);
 
+    function botaoClicado(){
+        console.log("fui clicado");
+        let texto = botao.querySelector("span")
+    }
+</script>
 </html>
