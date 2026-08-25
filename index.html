@@ -9,50 +9,109 @@
     <style>
         header {
             background-color: darkblue;
-            color: rgb(250, 164, 53);
+            color: antiquewhite;
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
-        }   
+            border: 5px solid yellowgreen;
+            padding: 26px;
+        }
 
         main {
             background-color: antiquewhite;
             color: darkblue;
             max-width: 800px;
             margin: 0 auto;
+            padding: 16px;
+            text-align: center;
         }
 
+        article {
+            display: flex;
+        }
+
+        img {
+            height: 160px;
+            width: 160px;
+        }
+
+        .autor {
+            font-weight: bold;
+
+        }
     </style>
-<header>
-Colégio Estadual Princesa Isabel
-</header>
 </head>
 
 <body>
+    <header>
+        <h1>Colégio Estadual Princesa Isabel</h1>
 
+    </header>
 
     <main>
-        <div>
-            <h2>Meu primeiro post:</h2>
-        <p class="autor">Por: Pedro Rodriguês da Silva</p>
-        <p>O Colégio Estadual Princesa Isabel está localizado na cidade de Araruna, no interior do Paraná.</p>
-        <p>A escola opera em período Regular, manhã, tarde e noite com seis aulas e intervalo de 15 minutos.</p>
-        <p>Os professores são dedicados e atenciosos, quando se trata de ensinar os estudantes e preparar as aulas.</p>
-        <p>Os alimentos são de boa qualidade e preparados com atenção pelas cozinheiras.</p>
-        <button>💩​ <span>5233478963</span></button>
-        
-    </div>
+        <article>
+            <img src="imagem1.jpeg" alt="imagem inicial do blog">
+            <div>
+                <h2>Meu primero post:</h2>
+                <p class="autor"> por: Pedro Rodriguês da Silva</p>
+                <p>O Colégio Estadual Princesa Isabel está localizado na cidade de Araruna, no interior do Paraná.</p>
+                <p>A escola opera em período Regular, manhã, tarde e noite com seis aulas e intervalo de 15 minutos.</p>
+                <p>Os professores são dedicados e atenciosos, quando se trata de ensinar os estudantes e preparar as aulas.</p>
+                <p>Os alimentos são de boa qualidade e preparados com atenção pelas cozinheiras.</p>
+                <button>👎​ <span>0</span></button>
+                <button>👍​ <span>0</span></button>
+                
+            </div>
+        </article>
+        <article>
+            <img src="imagem1.jpeg" alt="imagem inicial do blog">
+            <div>
+                <h2>Meu segundo post:</h2>
+                <p class="autor"> por: Pedro Rodriguês da Silva</p>
+                <p>O Colégio Estadual Princesa Isabel está localizado na cidade de Araruna, no interior do Paraná.</p>
+                <p>A escola opera em período Regular, manhã, tarde e noite com seis aulas e intervalo de 15 minutos.</p>
+                <p>Os professores são dedicados e atenciosos, quando se trata de ensinar os estudantes e preparar as aulas.</p>
+                <p>Os alimentos são de boa qualidade e preparados com atenção pelas cozinheiras.</p>
+                <button>👎​ <span>0</span></button>
+                <button>👍​ <span>0</span></button>
+            </div>
+        </article>
+        <article>
+            <img src="imagem1.jpeg" alt="imagem inicial do blog">
+            <div>
+                <h2>Meu terceiro post:</h2>
+                <p class="autor"> por: Pedro Rodriguês da Silva</p>
+                <p>O Colégio Estadual Princesa Isabel está localizado na cidade de Araruna, no interior do Paraná.</p>
+                <p>A escola opera em período Regular, manhã, tarde e noite com seis aulas e intervalo de 15 minutos.</p>
+                <p>Os professores são dedicados e atenciosos, quando se trata de ensinar os estudantes e preparar as aulas.</p>
+                <p>Os alimentos são de boa qualidade e preparados com atenção pelas cozinheiras.</p>
+                <button>👎​ <span>0</span></button>
+                <button>👍​ <span>0</span></button>
+            </div>
+        </article>
     </main>
 
 </body>
-<script>
-    const botao = document.querySelector("button");
-    botao.addEvenListener("click", botaoClicando);
 
-    function botaoClicado(){
-        console.log("fui clicado");
-        let texto = botao.querySelector("span")
-        texto.textContent++;
-    }
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            if (curtiu === false) {
+                texto.textContent++;
+                curtiu = true;
+            } else {
+                texto.textContent--;
+                curtiu = false;
+            }
+            
+        }
+    })
 </script>
+
 </html>
