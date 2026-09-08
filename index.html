@@ -6,40 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educação Digital</title>
-    <style>
-        header {
-            background-color: darkblue;
-            color: antiquewhite;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            border: 5px solid yellowgreen;
-            padding: 26px;
-        }
-
-        main {
-            background-color: antiquewhite;
-            color: darkblue;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 16px;
-            text-align: center;
-        }
-
-        article {
-            display: flex;
-        }
-
-        img {
-            height: 160px;
-            width: 160px;
-        }
-
-        .autor {
-            font-weight: bold;
-
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+      
 </head>
 
 <body>
@@ -91,27 +59,7 @@
         </article>
     </main>
 
+    <script src="script.js"></script>
 </body>
-
-<script>
-    const botoes = document.querySelectorAll("button");
-
-    botoes.forEach(function (botao) {
-        let curtiu = false;
-        botao.addEventListener("click", botaoClicado);
-        function botaoClicado() {
-            console.log("fui clicado");
-            let texto = botao.querySelector("span");
-            if (curtiu === false) {
-                texto.textContent++;
-                curtiu = true;
-            } else {
-                texto.textContent--;
-                curtiu = false;
-            }
-            
-        }
-    })
-</script>
 
 </html>
